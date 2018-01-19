@@ -1,25 +1,11 @@
-export const svg = {
-  mint:{
-    fill: 'url(#mint)'
-  },
-  sky:{
-    fill: 'url(#sky)'
-  },
-  grass:{
-    fill: 'url(#grass)'
-  },
-  white:{
-    fill: 'url(#white)'
-  },
-  creme:{
-    fill: 'url(#creme)'
-  },
-  yellow:{
-    fill: 'url(#yellow)'
-  },
-  dark:{
-    fill: 'url(#dark)'
-  },
+export const v = {
+  mint: 'url(#mint)',
+  sky: 'url(#sky)',
+  grass: 'url(#grass)',
+  white: 'url(#white)',
+  creme: 'url(#creme)',
+  yellow: 'url(#yellow)',
+  dark: 'url(#dark)',
 }
 export const animation = {
   bulbRed: {

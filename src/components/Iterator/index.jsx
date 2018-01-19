@@ -1,6 +1,11 @@
-import React from 'react'
 import propTypes from 'prop-types'
-import uniId from '../../utils'
+import React from 'react'
+import uniId from '../utils/uniId'
+
+
+const Fragment = React.Fragment
+
+
 
 const Iterator = ({ Component, items, className }) => {
   const iteration = (iterationItems, IterationComponent) => {
@@ -21,9 +26,9 @@ const Iterator = ({ Component, items, className }) => {
     return null
   }
   return (
-    <div className={className}>
+    <Fragment>
       {iteration(items, (props) => <Component {...props} />)}
-    </div>
+    </Fragment>
   )
 }
 
