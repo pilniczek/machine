@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <SVGcanvas width="600" height="800">
-          <LightningEngine x={467} y={100} />
+          <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350} />
         </SVGcanvas>
       </div>
