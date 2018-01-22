@@ -1,15 +1,9 @@
-import { css } from 'aphrodite/no-important'
 import { number } from 'prop-types'
 import React from 'react'
-import s from '../config/SVGdefsClasses'
 
 
-//import styles from './styles'
-
-
-const EngineTube = ({x,y}) => (
-  <path
-    className={css(s.mint)}
+const EngineTube = ({x,y,...rest}) => (
+  <path {...rest}
     d={`m ${x},${y}
        a 7,7 0 0,0 -15,0
        l 0,25

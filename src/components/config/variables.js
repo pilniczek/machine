@@ -36,18 +36,6 @@ export const animation = {
   },
 }
 export const keyframes = {
-  blinkGreen: `@keyframes blinkGreen {
-    0% { filter: drop-shadow( 0px 0px 5px green ); }
-    80% { filter: drop-shadow( 0px 0px 5px green ); }
-    81% { filter: drop-shadow( 0px 0px 0px green ); }
-    100% { filter: drop-shadow( 0px 0px 0px green ); }
-  }`,
-  blinkRed: `@keyframes blinkRed {
-    0% { filter: drop-shadow( 0px 0px 0px red ); }
-    80% { filter: drop-shadow( 0px 0px 0px red ); }
-    81% { filter: drop-shadow( 0px 0px 5px red ); }
-    100% { filter: drop-shadow( 0px 0px 5px red ); }
-  }`,
   tick: `@keyframes tick {
     0% { transform: rotate(-90deg); }
     90% { transform: rotate(90deg); }
