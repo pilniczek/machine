@@ -3,26 +3,47 @@ import { v } from './variables'
 
 
 const s = StyleSheet.create({
-  mint:{
+  mint: {
     fill: v.mint,
   },
-  sky:{
+  sky: {
     fill: v.sky,
   },
-  grass:{
+  grass: {
     fill: v.grass,
   },
-  white:{
+  white: {
     fill: v.white,
   },
-  creme:{
+  creme: {
     fill: v.creme,
   },
-  yellow:{
+  yellow: {
     fill: v.yellow,
   },
-  dark:{
+  dark: {
     fill: v.dark,
+  },
+  mintDark: {
+    fill: v.mintDark,
+  },
+  skyDark: {
+    fill: v.skyDark,
+  },
+  grassDark: {
+    fill: v.grassDark,
+  },
+  whiteDark: {
+    fill: v.whiteDark,
+  },
+  cremeDark: {
+    fill: v.cremeDark,
+  },
+  yellowDark: {
+    fill: v.yellowDark,
+  },
+  darkDark: {
+    fill: v.darkDark,
   },
 })
 

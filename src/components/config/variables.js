@@ -6,6 +6,13 @@ export const v = {
   creme: 'url(#creme)',
   yellow: 'url(#yellow)',
   dark: 'url(#dark)',
+  mintDark: 'url(#mintDark)',
+  skyDark: 'url(#skyDark)',
+  grassDark: 'url(#grassDark)',
+  whiteDark: 'url(#whiteDark)',
+  cremeDark: 'url(#cremeDark)',
+  yellowDark: 'url(#yellowDark)',
+  darkDark: 'url(#darkDark)',
 }
 export const animation = {
   bulbRed: {

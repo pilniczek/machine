@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "aphrodite": "^1.2.5",
+    "color": "^2.0.1",
     "jsx-control-statements": "^3.2.8",
     "lodash": "^4.17.4",
     "nanoid": "^1.0.1",
