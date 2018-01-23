@@ -31,16 +31,21 @@ class App extends Component {
   }
 
   render() {
+    let intro
+    if(this.state.isDark){
+      intro = (<button className={css(styles.welcome)} onClick={() => this.handleDarkChange()}>
+        <div className={css(styles.text)}>This areas are interactive</div>
+        <div className={css(styles.ok)}>OK!</div>
+      </button>)
+    }
+
     return (
       <div className="App">
         <SVGcanvas width="600" height="800">
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350} isDark={this.state.isDark} />
         </SVGcanvas>
-        <button className={css(styles.welcome)} onClick={() => this.handleDarkChange()}>
-          This areas are interactive
-          <div className="ok">OK!</div>
-        </button>
+        {intro}
       </div>
     )
   }
