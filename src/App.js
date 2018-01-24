@@ -2,6 +2,7 @@ import './App.css'
 
 import { css } from 'aphrodite/no-important'
 import React, { Component } from 'react'
+import AdditionalTubes from './components/AdditionalTubes'
 import Board from './components/Board'
 import Boiler from './components/Boiler'
 import LightningEngine from './components/LightningEngine'
@@ -48,6 +49,7 @@ class App extends Component {
           <Boiler x={180} y={350}/>
           <SteamEngine x={30} y={700}/>
           <Board x={220} y={280} isDark={this.state.isDark} />
+          <AdditionalTubes isDark={this.state.isDark} />
         </SVGcanvas>
         {intro}
       </div>
