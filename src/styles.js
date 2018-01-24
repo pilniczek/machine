@@ -2,6 +2,15 @@ import { StyleSheet } from 'aphrodite/no-important'
 
 
 const styles = StyleSheet.create({
+  app: {
+    display: 'flex',
+  },
+  appBg: {
+    background: 'linear-gradient(90deg, rgba(94,87,112,1) 0%, rgba(94,87,112,1) 50.999%, rgba(82,79,90,1) 51%, rgba(82,79,90,1) 100%)',
+  },
+  isDark: {
+    backgroundColor: 'rgb(30, 30, 30)',
+  },
   welcome: {
     position: 'absolute',
     width: '20vw',

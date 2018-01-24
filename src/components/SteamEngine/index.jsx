@@ -30,7 +30,6 @@ class SteamEngine extends Component {
         onMouseEnter={() => this.updateHoverState(true)}
         onMouseLeave={() => this.updateHoverState(false)}
       >
-        {/* 30,700 */}
         <path className={css(s.creme)}
           d={`m${x},${y}
             c -35,0 -35,-60 0,-60

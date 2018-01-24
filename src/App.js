@@ -15,7 +15,7 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      isDark: true
+      isDark: false//true
     }
 
     this.setDark = this.setDark.bind(this)
@@ -42,7 +42,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className={css(styles.app, this.state.isDark ? styles.isDark : styles.appBg)}>
         <SVGcanvas width="600" height="800">
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350}/>
