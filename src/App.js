@@ -8,6 +8,7 @@ import Boiler from './components/Boiler'
 import LightningEngine from './components/LightningEngine'
 import SteamEngine from './components/SteamEngine'
 import SVGcanvas from './components/SVGcanvas'
+import Gear from './components/Gear'
 import styles from './styles'
 
 
@@ -45,11 +46,13 @@ class App extends Component {
     return (
       <div className={css(styles.app, this.state.isDark ? styles.isDark : styles.appBg)}>
         <SVGcanvas width="600" height="800">
-          <LightningEngine x={350} y={20} />
-          <Boiler x={180} y={350}/>
-          <SteamEngine x={30} y={700}/>
-          <Board x={220} y={280} isDark={this.state.isDark} />
+          <Gear x={50} y={50} isDark={this.state.isDark} />
+          <Gear x={123} y={123} isSmall isDark={this.state.isDark} />
           <AdditionalTubes isDark={this.state.isDark} />
+          <LightningEngine x={350} y={20} />
+          <Boiler x={180} y={350} />
+          <SteamEngine x={30} y={700} />
+          <Board x={220} y={280} isDark={this.state.isDark} />
         </SVGcanvas>
         {intro}
       </div>
