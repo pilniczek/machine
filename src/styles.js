@@ -1,11 +1,5 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import Color from 'color'
 
-
-let darken = .15
-let transformColor = (color,darken,saturate) => (
-  Color(color).darken(darken).rgb().string()
-)
 
 const styles = StyleSheet.create({
   welcome: {

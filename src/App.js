@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Board from './components/Board'
 import Boiler from './components/Boiler'
 import LightningEngine from './components/LightningEngine'
+import SteamEngine from './components/SteamEngine'
 import SVGcanvas from './components/SVGcanvas'
 import styles from './styles'
 
@@ -35,7 +36,7 @@ class App extends Component {
     let intro
     if(this.state.isDark){
       intro = (<button className={css(styles.welcome)} onClick={() => this.handleDarkChange()}>
-        <div className={css(styles.text)}>This areas are interactive</div>
+        <div className={css(styles.text)}>These areas are interactive</div>
         <div className={css(styles.ok)}>OK!</div>
       </button>)
     }
@@ -45,6 +46,7 @@ class App extends Component {
         <SVGcanvas width="600" height="800">
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350}/>
+          <SteamEngine x={30} y={700}/>
           <Board x={220} y={280} isDark={this.state.isDark} />
         </SVGcanvas>
         {intro}
