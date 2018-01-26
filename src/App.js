@@ -5,10 +5,10 @@ import React, { Component } from 'react'
 import AdditionalTubes from './components/AdditionalTubes'
 import Board from './components/Board'
 import Boiler from './components/Boiler'
+import Gear from './components/Gear'
 import LightningEngine from './components/LightningEngine'
 import SteamEngine from './components/SteamEngine'
 import SVGcanvas from './components/SVGcanvas'
-import Gear from './components/Gear'
 import styles from './styles'
 
 
@@ -46,8 +46,10 @@ class App extends Component {
     return (
       <div className={css(styles.app, this.state.isDark ? styles.isDark : styles.appBg)}>
         <SVGcanvas width="600" height="800">
-          <Gear x={50} y={50} isDark={this.state.isDark} />
-          <Gear x={123} y={123} isSmall isDark={this.state.isDark} />
+          <Gear x={70} y={200} size="l" speed="10s" reverse isDark={this.state.isDark} />
+          <Gear x={155} y={200} size="s" speed="3.2s" isDark={this.state.isDark} />
+          <Gear x={220} y={200} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
+          <Gear x={300} y={200} size="ma" speed="6s" isDark={this.state.isDark} />
           <AdditionalTubes isDark={this.state.isDark} />
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350} />
