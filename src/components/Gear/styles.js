@@ -22,12 +22,14 @@ export const keyframes = {
 
 const styles = StyleSheet.create({
   spin: {
+    transformBox: 'fill-box',
     animationName: keyframes.spin,
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
     transformOrigin: 'center center',
   },
   spinReverse: {
+    transformBox: 'fill-box',
     animationName: keyframes.spinReverse,
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',

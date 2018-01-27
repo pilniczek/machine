@@ -9,6 +9,7 @@ import Gear from './components/Gear'
 import LightningEngine from './components/LightningEngine'
 import SteamEngine from './components/SteamEngine'
 import SVGcanvas from './components/SVGcanvas'
+import V3Engine from './components/V3Engine'
 import styles from './styles'
 
 
@@ -51,6 +52,7 @@ class App extends Component {
           <Gear x={220} y={200} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
           <Gear x={300} y={200} size="ma" speed="6s" isDark={this.state.isDark} />
           <AdditionalTubes isDark={this.state.isDark} />
+          <V3Engine x={150} y={150} isDark={this.state.isDark} />
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350} />
           <SteamEngine x={30} y={700} />
