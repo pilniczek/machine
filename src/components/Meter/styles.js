@@ -20,15 +20,20 @@ export const keyframes = {
 
 const styles = StyleSheet.create({
   ticking: {
+    transformBox: 'fill-box',
+    animationName: keyframes.ticking,
+    animationIterationCount: 'infinite',
+    animationTimingFunction: 'linear',
+    animationDuration: '5s',
     stroke: 'red',
     strokeWidth: '2',
     strokeLinecap: 'round',
-    transformOrigin: '-15px -12px',
-    animationName: keyframes.ticking,
-    animationDuration: '5s',
-    animationIterationCount: 'infinite',
-    //animation: 'tick 5s linear infinite',
   },
+  numbers: {
+    strokeWidth: '4',
+    strokeDasharray: '1 4',
+    fill: 'none',
+  }
 })
 
 export default styles

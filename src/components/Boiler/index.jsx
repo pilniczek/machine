@@ -2,6 +2,7 @@ import { css } from 'aphrodite/no-important'
 import { number } from 'prop-types'
 import React, { Component } from 'react'
 import s from '../config/SVGdefsClasses'
+import Meter from '../Meter'
 import Screw from '../Screw'
 import SideScrew from '../SideScrew'
 import styles from './styles'
@@ -59,9 +60,7 @@ class Boiler extends Component {
         <Screw x={x-115} y={y+120} className={css(s.creme)} />
         <Screw x={x-80} y={y+120} className={css(s.creme)} />
         <Screw x={x-80} y={y+150} className={css(s.creme)} />
-        {
-          //<PointerGroup x={x+185} y={y+430}scale(.8)" />
-        }
+        <Meter x={x+50} y={y+190} transform="scale(.8)" />
       </g>
     )
   }
