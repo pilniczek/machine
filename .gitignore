@@ -1,20 +1,59 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
+/composer
+
+# Environment Configuration
+.env
+temp
 
 # testing
 /coverage
 
 # production
 /build
+#/public
+/www/_cache/*
 
-# misc
-.DS_Store
+# Logs
+logs
+log
+*.log
+
+# user specific ide
+.idea
+.vscode
+
+# Flow Coverage Report
+flow-coverage/
+
+# locals
+/config.local.js
+/config.local.neon
 .env
-npm-debug.log*
+/media
+
+# cache
+__pycache__
+
+# temp backups
+*.bck
+_bck
+
+# OSX crap
+.DS_*
+
+# https://docs.npmjs.com/files/package.json
+.git
+CVS
+.svn
+.hg
+.lock-wscript
+.wafpickle-N
+.*.swp
+._*
+npm-debug.log
 yarn-debug.log*
 yarn-error.log*
-
-# user specific
-/.idea/
+.npmrc
+config.gypi
+*.orig
