@@ -51,7 +51,15 @@ class App extends Component {
           <Gear x={155} y={200} size="s" speed="3.2s" isDark={this.state.isDark} />
           <Gear x={220} y={200} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
           <Gear x={300} y={200} size="ma" speed="6s" isDark={this.state.isDark} />
-          <AdditionalTubes isDark={this.state.isDark} />
+          <AdditionalTubes
+            isDark={this.state.isDark}
+            positionX={10}
+            positionY={10}
+            width={270}
+            height={80}
+            text="Custom text"
+            fontSize={32}
+          />
           <V3Engine x={150} y={150} isDark={this.state.isDark} />
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350} />
