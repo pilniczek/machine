@@ -46,7 +46,8 @@ class App extends Component {
 
     return (
       <div className={css(styles.app, this.state.isDark ? styles.isDark : styles.appBg)}>
-        <SVGcanvas width="600" height="800">
+        <SVGcanvas width="550" height="800">
+          <Board x={130} y={280} width={400} height={500} isDark={this.state.isDark} />
           <Gear x={70} y={200} size="l" speed="10s" reverse isDark={this.state.isDark} />
           <Gear x={155} y={200} size="s" speed="3.2s" isDark={this.state.isDark} />
           <Gear x={220} y={200} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
@@ -64,7 +65,6 @@ class App extends Component {
           <LightningEngine x={350} y={20} />
           <Boiler x={180} y={350} />
           <SteamEngine x={30} y={700} />
-          <Board x={220} y={280} isDark={this.state.isDark} />
         </SVGcanvas>
         {intro}
       </div>
