@@ -42,6 +42,12 @@ const AdditionalTubes = ({isDark, positionX, positionY, width, height, text, fon
     >
       {text}
     </text>
+    <path className={css(isDark ? s.cremeDark : s.creme)}
+        d="m115,520 0,5 5,0 0,50 -5,0 0,5 25,0 0,-5 -5,0 0,-50 5,0 0,-5" 
+      />
+    <path className={css(isDark ? s.cremeDark : s.creme)}
+      d="m115,580 0,5 5,0 0,50 -5,0 0,5 25,0 0,-5 -5,0 0,-50 5,0 0,-5" 
+    />  
   </g>
 )
     
