@@ -20,7 +20,6 @@ export const keyframes = {
 
 const styles = StyleSheet.create({
   ticking: {
-    transformBox: 'fill-box',
     animationName: keyframes.ticking,
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
