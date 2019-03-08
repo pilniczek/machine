@@ -3,6 +3,7 @@ import { bool, number } from 'prop-types'
 import React from 'react'
 import s from '../config/SVGdefsClasses'
 import styles from './styles'
+import Screw from '../Screw'
 
 
 const Meter = ({x,y,isDark,...rest}) => (  
@@ -19,6 +20,10 @@ const Meter = ({x,y,isDark,...rest}) => (
     <path style={{transformOrigin: `${x-15}px ${y-12}px`}}
       className={css(styles.ticking, isDark ? styles.redDark : styles.red)}
       d={`m${x-15},${y-14} 0,-10`}
+    />
+    <Screw
+      className={css(isDark ? s.cremeDark : s.creme)}
+      x={x-14} y={y-14}
     />
   </g>
 )

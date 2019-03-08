@@ -4,6 +4,7 @@ import React from 'react'
 import Bulb from '../Bulb'
 import s from '../config/SVGdefsClasses'
 import EngineTube from '../EngineTube'
+import Meter from '../Meter'
 import styles from './styles'
 
 
@@ -23,6 +24,7 @@ const LightningEngine = ({x,y,isDark}) => (
     />
     <Bulb x={x+60} y={y+40} color="red" />
     <Bulb x={x+80} y={y+40} color="green" />
+    <Meter x={x+145} y={y+60} />
     <EngineTube x={x+30} y={y+80} className={css(s.mint, isDark && styles.isDark)} />
     <EngineTube x={x+45} y={y+80} className={css(s.mint, isDark && styles.isDark)} />
     <EngineTube x={x+60} y={y+80} className={css(s.mint, isDark && styles.isDark)} />
