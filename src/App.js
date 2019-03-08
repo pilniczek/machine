@@ -4,6 +4,7 @@ import { css } from 'aphrodite/no-important'
 import React, { Component } from 'react'
 import AdditionalTubes from './components/AdditionalTubes'
 import Board from './components/Board'
+import MainBoard from './components/MainBoard'
 import Boiler from './components/Boiler'
 import Gear from './components/Gear'
 import LightningEngine from './components/LightningEngine'
@@ -47,24 +48,29 @@ class App extends Component {
     return (
       <div className={css(styles.app, this.state.isDark ? styles.isDark : styles.appBg)}>
         <SVGcanvas width="550" height="800">
-          <Board x={130} y={280} width={400} height={500} isDark={this.state.isDark} />
-          <Gear x={70} y={200} size="l" speed="10s" reverse isDark={this.state.isDark} />
-          <Gear x={155} y={200} size="s" speed="3.2s" isDark={this.state.isDark} />
-          <Gear x={220} y={200} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
-          <Gear x={300} y={200} size="ma" speed="6s" isDark={this.state.isDark} />
-          <AdditionalTubes
-            isDark={this.state.isDark}
-            positionX={10}
-            positionY={10}
-            width={270}
+          <Gear x={50} y={230} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
+          <Gear x={225} y={210} size="l" speed="10s" reverse isDark={this.state.isDark} />
+          <Gear x={260} y={115} size="ma" speed="6s" isDark={this.state.isDark} />
+          <Gear x={360} y={130} size="l" speed="10s" reverse isDark={this.state.isDark} />
+          <Gear x={50} y={295} size="s" speed="3.2s" isDark={this.state.isDark} />
+          <Gear x={90} y={370} size="l" speed="10s" reverse isDark={this.state.isDark} />
+          <Gear x={120} y={620} size="l" speed="10s" isDark={this.state.isDark} />
+          <Board x={125} y={250} width={405} height={500} isDark={this.state.isDark} />
+          <MainBoard
+            x={10}
+            y={25}
+            width={280}
             height={80}
             text="Custom text"
             fontSize={32}
+            isDark={this.state.isDark}
           />
-          <V3Engine x={150} y={150} isDark={this.state.isDark} />
-          <LightningEngine x={350} y={20} />
-          <Boiler x={180} y={350} />
-          <SteamEngine x={30} y={700} />
+          <V3Engine x={100} y={135} isDark={this.state.isDark} />
+          <LightningEngine x={350} y={10} />
+          <Boiler x={180} y={365} />
+          <SteamEngine x={30} y={715} />
+          <AdditionalTubes isDark={this.state.isDark} x={115} y={535} />
+          <AdditionalTubes isDark={this.state.isDark} x={115} y={595} />
         </SVGcanvas>
         {intro}
       </div>

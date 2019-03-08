@@ -20,7 +20,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
         cx={x} cy={y} r="20"
       />
       <circle className={css(mainColor)} cx={x} cy={y} r="20" />
-      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.7% .7%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.7%'}}
         className={css(gearSpin, holesColor1)}
         cx={x} cy={y} r="11"
       />
@@ -32,7 +32,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
         cx={x} cy={y} r="40"
       />
       <circle className={css(mainColor)} cx={x} cy={y} r="40" />
-      <circle style={{animationDuration: speed,strokeWidth: '22',strokeDasharray: '1.4% 1.35%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '22',strokeDasharray: '1.4%'}}
         className={css(gearSpin, holesColor1)}
         cx={x} cy={y} r="22"
       />
@@ -44,7 +44,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
         cx={x} cy={y} r="35"
       />
       <circle className={css(mainColor)} cx={x} cy={y} r="35" />
-      <circle style={{animationDuration: speed,strokeWidth: '35',strokeDasharray: '2% 2%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '35',strokeDasharray: '2%'}}
         className={css(gearSpin, holesColor1)}
         cx={x} cy={y} r="13"
       />
@@ -57,7 +57,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
         cx={x} cy={y} r="60"
       />
       <circle className={css(mainColor)} cx={x} cy={y} r="60" />
-      <circle style={{animationDuration: speed,strokeWidth: '35',strokeDasharray: '2% 2%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '35',strokeDasharray: '2%'}}
         className={css(gearSpin, holesColor1)}
         cx={x} cy={y} r="35"
       />
