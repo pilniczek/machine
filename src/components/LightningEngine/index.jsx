@@ -8,7 +8,7 @@ import Meter from '../Meter'
 import styles from './styles'
 
 
-const LightningEngine = ({x,y,isDark}) => (
+const LightningEngine = ({x,y,isDark,animationPause}) => (
   <g className={css(styles.lightningEngine)}>
     <path className={css(s.grass, isDark && styles.isDark)}
       d={`m${x},${y} l0,100 l105,0 l0,-20 l50,0
@@ -24,7 +24,7 @@ const LightningEngine = ({x,y,isDark}) => (
     />
     <Bulb x={x+60} y={y+40} color="red" />
     <Bulb x={x+80} y={y+40} color="green" />
-    <Meter x={x+145} y={y+60} />
+    <Meter x={x+145} y={y+60} animationPause={animationPause} />
     <EngineTube x={x+30} y={y+80} className={css(s.mint, isDark && styles.isDark)} />
     <EngineTube x={x+45} y={y+80} className={css(s.mint, isDark && styles.isDark)} />
     <EngineTube x={x+60} y={y+80} className={css(s.mint, isDark && styles.isDark)} />

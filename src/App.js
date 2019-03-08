@@ -21,6 +21,7 @@ class App extends Component {
     this.state = {
       isDark: false,//true,
       page: true,
+      animationPause: 'paused',
     }
 
     this.setDark = this.setDark.bind(this)
@@ -28,6 +29,9 @@ class App extends Component {
 
     this.setPage = this.setPage.bind(this)
     this.handlePageChange = this.handlePageChange.bind(this)
+
+    this.setAnimationPause = this.setAnimationPause.bind(this)
+    //this.handleAnimationPauseChange = this.handleAnimationPauseChange.bind(this)
   }
 
   setDark (isDark) {
@@ -42,12 +46,24 @@ class App extends Component {
     })
   }
 
+  setAnimationPause (animationPause) {
+    this.setState({
+      animationPause: animationPause,
+    })
+  }
+
   handleDarkChange () {
     this.setDark(!this.state.isDark)
   }
 
   handlePageChange () {
     this.setPage(!this.state.page)
+    if(this.state.animationPause === 'paused'){
+      this.setAnimationPause('running')
+      setTimeout(() => {
+        this.setAnimationPause('paused')
+      }, 3000);
+    }
   }
 
   render() {
@@ -62,14 +78,36 @@ class App extends Component {
     return (
       <div className={css(styles.app, this.state.isDark ? styles.isDark : styles.appBg)}>
         <SVGcanvas width="550" height="800">
-          <Gear x={50} y={230} size="m" speed="6.4s" reverse isDark={this.state.isDark} />
-          <Gear x={225} y={210} size="l" speed="10s" reverse isDark={this.state.isDark} />
-          <Gear x={260} y={115} size="ma" speed="6s" isDark={this.state.isDark} />
-          <Gear x={360} y={130} size="l" speed="10s" reverse isDark={this.state.isDark} />
-          <Gear x={50} y={295} size="s" speed="3.2s" isDark={this.state.isDark} />
-          <Gear x={90} y={370} size="l" speed="10s" reverse isDark={this.state.isDark} />
-          <Gear x={120} y={620} size="l" speed="10s" isDark={this.state.isDark} />
-          <Board x={125} y={250} width={405} height={500} isDark={this.state.isDark}>
+          <Gear x={50} y={230} size="m" speed="6.4s" reverse
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Gear x={225} y={210} size="l" speed="10s" reverse
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Gear x={260} y={115} size="ma" speed="6s"
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Gear x={360} y={130} size="l" speed="10s" reverse
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Gear x={50} y={295} size="s" speed="3.2s"
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Gear x={90} y={370} size="l" speed="10s" reverse
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Gear x={120} y={620} size="l" speed="10s"
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <Board x={125} y={250} width={405} height={500}
+            isDark={this.state.isDark}>
             <text x={185} y={310} dominantBaseline="central" fontSize={24}>
             {this.state.page ? 'infoinfoi nfoinfo' : '2infoinfoi 2nfoinfo'}
             </text>
@@ -119,9 +157,12 @@ class App extends Component {
             fontSize={32}
             isDark={this.state.isDark}
           />
-          <V3Engine x={100} y={135} isDark={this.state.isDark} />
-          <LightningEngine x={350} y={10} />
-          <Boiler x={180} y={365} />
+          <V3Engine x={100} y={135}
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <LightningEngine x={350} y={10} animationPause={this.state.animationPause} />
+          <Boiler x={180} y={365} animationPause={this.state.animationPause} />
           <SteamEngine x={30} y={715} />
           <AdditionalTubes isDark={this.state.isDark} x={115} y={535} />
           <AdditionalTubes isDark={this.state.isDark} x={115} y={595} />

@@ -24,7 +24,7 @@ class Boiler extends Component {
   }
 
   render() {
-    const { x, y, isDark } = this.props
+    const { x, y, isDark, animationPause } = this.props
     return (
       <g className={css(styles.boiler)}
         onMouseEnter={() => this.updateHoverState(true)}
@@ -60,7 +60,7 @@ class Boiler extends Component {
         <Screw x={x-115} y={y+120} className={css(s.creme)} />
         <Screw x={x-80} y={y+120} className={css(s.creme)} />
         <Screw x={x-80} y={y+150} className={css(s.creme)} />
-        <Meter x={x+50} y={y+190} transform="scale(.8)" />
+        <Meter x={x+50} y={y+190} transform="scale(.8)" animationPause={animationPause} />
       </g>
     )
   }

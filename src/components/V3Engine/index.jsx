@@ -24,7 +24,7 @@ class V3Engine extends Component {
   }
 
   render() {
-    const { x, y, isDark } = this.props
+    const { x, y, animationPause } = this.props
     return (
       <g className={css(styles.v3Engine)}
         onMouseEnter={() => this.updateHoverState(true)}
@@ -58,7 +58,7 @@ class V3Engine extends Component {
         <EngineTube x={x+80} y={y+60} className={css(s.mint)} />
         <EngineTube x={x+95} y={y+60} className={css(s.mint)} />
         
-        <Gear speed="1s" size="ma" x={x+30} y={y+55} />
+        <Gear speed="1s" size="ma" x={x+30} y={y+55} animationPause={animationPause} />
       </g>
     )
   }
