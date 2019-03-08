@@ -1,8 +1,8 @@
 import Color from 'color'
 
 
-let darken = .15
-let saturate = -.5
+let darken = .075
+let saturate = -.2
 let darkenExtra = .7
 let saturateExtra = -.9
 let transformColor = (color,darken,saturate) => (
