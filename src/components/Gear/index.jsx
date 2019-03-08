@@ -15,7 +15,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
   let gear
   if(size==='s'){
     gear = (<Fragment>
-      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.81%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.8%'}}
         className={css(gearSpin, teethColor)}
         cx={x} cy={y} r="20"
       />
@@ -27,7 +27,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
     </Fragment>)
   }else if(size==='m'){
     gear = (<Fragment>
-      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.81%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.8%'}}
         className={css(gearSpin, teethColor)}
         cx={x} cy={y} r="40"
       />
@@ -39,7 +39,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
     </Fragment>)
   }else if(size==='ma'){
     gear = (<Fragment>
-      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.74%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.7%'}}
         className={css(gearSpin, teethColor)}
         cx={x} cy={y} r="35"
       />
@@ -52,7 +52,7 @@ const Gear = ({x,y,isDark,reverse,speed,size}) => {
     </Fragment>)
   }else if(size==='l'){
     gear = (<Fragment>
-      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.81%'}}
+      <circle style={{animationDuration: speed,strokeWidth: '8',strokeDasharray: '.8%'}}
         className={css(gearSpin, teethColor)}
         cx={x} cy={y} r="60"
       />
