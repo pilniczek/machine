@@ -55,7 +55,38 @@ class App extends Component {
           <Gear x={50} y={295} size="s" speed="3.2s" isDark={this.state.isDark} />
           <Gear x={90} y={370} size="l" speed="10s" reverse isDark={this.state.isDark} />
           <Gear x={120} y={620} size="l" speed="10s" isDark={this.state.isDark} />
-          <Board x={125} y={250} width={405} height={500} isDark={this.state.isDark} />
+          <Board x={125} y={250} width={405} height={500} isDark={this.state.isDark}>
+            <text x={185} y={310} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={185} y={340} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={185} y={370} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={215} y={440} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={215} y={470} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={215} y={500} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={215} y={530} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={215} y={560} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={205} y={630} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+            <text x={205} y={660} dominantBaseline="central" fontSize={24}>
+              infoinfoi nfoinfo
+            </text>
+          </Board>
           <MainBoard
             x={10}
             y={25}

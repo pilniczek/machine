@@ -4,7 +4,7 @@ import React from 'react'
 import s from '../config/SVGdefsClasses'
 import Screw from '../Screw'
 
-const Board = ({x, y, width, height, isDark}) => (
+const Board = ({x, y, width, height, isDark, children}) => (
   <g>
     <rect
       className={css(isDark ? s.grassDark : s.grass)}
@@ -40,7 +40,7 @@ const Board = ({x, y, width, height, isDark}) => (
     />
     <rect
       className={css(isDark ? s.whiteDark : s.white)}
-      x={x+70} y={y+160} width={width-90} height="170"
+      x={x+70} y={y+160} width={width-90} height="180"
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
@@ -48,7 +48,7 @@ const Board = ({x, y, width, height, isDark}) => (
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
-      x={x+80} y={y+320}
+      x={x+80} y={y+330}
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
@@ -56,28 +56,29 @@ const Board = ({x, y, width, height, isDark}) => (
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
-      x={x+width-30} y={y+320}
+      x={x+width-30} y={y+330}
     />
     <rect
       className={css(isDark ? s.whiteDark : s.white)}
-      x={x+60} y={y+340} width={width-90} height="80"
+      x={x+60} y={y+350} width={width-90} height="90"
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
-      x={x+70} y={y+350}
+      x={x+70} y={y+360}
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
-      x={x+70} y={y+410}
+      x={x+70} y={y+430}
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
-      x={x+width-40} y={y+350}
+      x={x+width-40} y={y+360}
     />
     <Screw
       className={css(isDark ? s.cremeDark : s.creme)}
-      x={x+width-40} y={y+410}
+      x={x+width-40} y={y+430}
     />
+    {children}
   </g>
 )
 
