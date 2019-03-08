@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
   app: {
     display: 'flex',
   },
+  switch: {
+    cursor: 'pointer',
+    userSelect: 'none',
+  },
   appBg: {
     background: 'linear-gradient(90deg, rgba(94,87,112,1) 0%, rgba(94,87,112,1) 50.999%, rgba(82,79,90,1) 51%, rgba(82,79,90,1) 100%)',
   },

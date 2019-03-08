@@ -19,11 +19,15 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      isDark: false//true
+      isDark: false,//true,
+      page: true,
     }
 
     this.setDark = this.setDark.bind(this)
     this.handleDarkChange = this.handleDarkChange.bind(this)
+
+    this.setPage = this.setPage.bind(this)
+    this.handlePageChange = this.handlePageChange.bind(this)
   }
 
   setDark (isDark) {
@@ -32,8 +36,18 @@ class App extends Component {
     })
   }
 
+  setPage (page) {
+    this.setState({
+      page: page
+    })
+  }
+
   handleDarkChange () {
     this.setDark(!this.state.isDark)
+  }
+
+  handlePageChange () {
+    this.setPage(!this.state.page)
   }
 
   render() {
@@ -57,7 +71,7 @@ class App extends Component {
           <Gear x={120} y={620} size="l" speed="10s" isDark={this.state.isDark} />
           <Board x={125} y={250} width={405} height={500} isDark={this.state.isDark}>
             <text x={185} y={310} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
+            {this.state.page ? 'infoinfoi nfoinfo' : '2infoinfoi 2nfoinfo'}
             </text>
             <text x={185} y={340} dominantBaseline="central" fontSize={24}>
               infoinfoi nfoinfo
@@ -85,6 +99,15 @@ class App extends Component {
             </text>
             <text x={205} y={660} dominantBaseline="central" fontSize={24}>
               infoinfoi nfoinfo
+            </text>
+            <text x={300} y={720} className={css(styles.switch)}
+              dominantBaseline="central"
+              fontSize={24}
+              onClick={() => this.handlePageChange()}
+            >
+              <tspan className={css(styles.switchPager)}>
+                page {this.state.page ? 1 : 2}
+              </tspan>
             </text>
           </Board>
           <MainBoard
