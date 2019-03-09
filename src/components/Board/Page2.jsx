@@ -2,9 +2,10 @@ import { css } from 'aphrodite/no-important'
 import React from 'react'
 import s from '../config/SVGdefsClasses'
 import Screw from '../Screw'
+import styles from './styles'
 
-const Page2 = ({x, y, isDark}) => (
-  <g>
+const Page2 = ({x, y, isDark, style}) => (
+  <g style={style} className={css(styles.page)}>
     <rect
       className={css(isDark ? s.whiteDark : s.white)}
       x={x+40} y={y+30} width={400-70} height="120"

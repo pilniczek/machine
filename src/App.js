@@ -78,6 +78,7 @@ class App extends Component {
       this.setAnimationPause('running')
       setTimeout(() => {
         this.setAnimationPause('paused')
+        this.setPrevPage(this.state.page)
       }, time)
     }
   }
@@ -91,11 +92,14 @@ class App extends Component {
       </button>)
     }
 
-    let content
+    let content = []
     if (this.state.page === 1) {
-      content = <Page1  x={125} y={250} />
-    } else if (this.state.page === 2) {
-      content = <Page2  x={125} y={250} />
+      content[0] = 1
+      content[1] = 0
+    }
+    if (this.state.page === 2) {
+      content[0] = 0
+      content[1] = 1
     }
 
     return (
@@ -132,14 +136,23 @@ class App extends Component {
           <Board x={125} y={250} width={405} height={500}
             isDark={this.state.isDark}
           >
-            {content}
+            <Page1 x={125} y={250}
+              style={{
+                opacity: content[0],
+              }}
+            />
+            <Page2 x={125} y={250}
+              style={{
+                opacity: content[1],
+              }}
+            />
             <text x={300} y={720} className={css(styles.switch)}
               dominantBaseline="central"
               fontSize={24}
               onClick={() => this.handlePageChange()}
             >
               page
-              <tspan className={css(styles.switchPager)} 
+              <tspan className={css(styles.switchPager)}
                 style={{
                   opacity: 1,
                 }}
