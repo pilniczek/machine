@@ -14,3 +14,7 @@ export const v = {
   yellowDark: 'url(#yellowDark)',
   darkDark: 'url(#darkDark)',
 }
+
+export const time = 3000
+
+export const totalPages = 2

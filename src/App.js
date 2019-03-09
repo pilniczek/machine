@@ -2,8 +2,11 @@ import './App.css'
 
 import { css } from 'aphrodite/no-important'
 import React, { Component } from 'react'
+import { time, totalPages } from './components/config/variables'
 import AdditionalTubes from './components/AdditionalTubes'
 import Board from './components/Board'
+import Page1 from './components/Board/Page1'
+import Page2 from './components/Board/Page2'
 import MainBoard from './components/MainBoard'
 import Boiler from './components/Boiler'
 import Gear from './components/Gear'
@@ -13,14 +16,14 @@ import SVGcanvas from './components/SVGcanvas'
 import V3Engine from './components/V3Engine'
 import styles from './styles'
 
-
 class App extends Component {
 
   constructor (props) {
     super(props)
     this.state = {
       isDark: false,//true,
-      page: true,
+      page: 1,
+      prevPage: 1,
       animationPause: 'paused',
     }
 
@@ -29,6 +32,9 @@ class App extends Component {
 
     this.setPage = this.setPage.bind(this)
     this.handlePageChange = this.handlePageChange.bind(this)
+
+    this.setPrevPage = this.setPrevPage.bind(this)
+    //this.handlePrevPageChange = this.handlePrevPageChange.bind(this)
 
     this.setAnimationPause = this.setAnimationPause.bind(this)
     //this.handleAnimationPauseChange = this.handleAnimationPauseChange.bind(this)
@@ -46,6 +52,12 @@ class App extends Component {
     })
   }
 
+  setPrevPage (prevPage) {
+    this.setState({
+      prevPage: prevPage
+    })
+  }
+
   setAnimationPause (animationPause) {
     this.setState({
       animationPause: animationPause,
@@ -57,12 +69,16 @@ class App extends Component {
   }
 
   handlePageChange () {
-    this.setPage(!this.state.page)
     if(this.state.animationPause === 'paused'){
+      if(this.state.page !== totalPages){
+        this.setPage(this.state.page + 1)
+      }else{
+        this.setPage(1)
+      }
       this.setAnimationPause('running')
       setTimeout(() => {
         this.setAnimationPause('paused')
-      }, 3000);
+      }, time)
     }
   }
 
@@ -73,6 +89,13 @@ class App extends Component {
         <div className={css(styles.text)}>These areas are interactive</div>
         <div className={css(styles.ok)}>OK!</div>
       </button>)
+    }
+
+    let content
+    if (this.state.page === 1) {
+      content = <Page1  x={125} y={250} />
+    } else if (this.state.page === 2) {
+      content = <Page2  x={125} y={250} />
     }
 
     return (
@@ -107,44 +130,21 @@ class App extends Component {
             animationPause={this.state.animationPause}
           />
           <Board x={125} y={250} width={405} height={500}
-            isDark={this.state.isDark}>
-            <text x={185} y={310} dominantBaseline="central" fontSize={24}>
-            {this.state.page ? 'infoinfoi nfoinfo' : '2infoinfoi 2nfoinfo'}
-            </text>
-            <text x={185} y={340} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={185} y={370} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={215} y={440} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={215} y={470} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={215} y={500} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={215} y={530} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={215} y={560} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={205} y={630} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
-            <text x={205} y={660} dominantBaseline="central" fontSize={24}>
-              infoinfoi nfoinfo
-            </text>
+            isDark={this.state.isDark}
+          >
+            {content}
             <text x={300} y={720} className={css(styles.switch)}
               dominantBaseline="central"
               fontSize={24}
               onClick={() => this.handlePageChange()}
             >
-              <tspan className={css(styles.switchPager)}>
-                page {this.state.page ? 1 : 2}
+              page
+              <tspan className={css(styles.switchPager)} 
+                style={{
+                  opacity: 1,
+                }}
+              >
+                {this.state.page}
               </tspan>
             </text>
           </Board>
