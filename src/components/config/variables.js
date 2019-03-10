@@ -15,6 +15,6 @@ export const v = {
   darkDark: 'url(#darkDark)',
 }
 
-export const time = 3000
+export const time = 1500
 
 export const totalPages = 2

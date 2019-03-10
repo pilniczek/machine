@@ -134,12 +134,23 @@ class App extends Component {
             isDark={this.state.isDark}
             animationPause={this.state.animationPause}
           />
+          <V3Engine x={100} y={135}
+            isDark={this.state.isDark}
+            animationPause={this.state.animationPause}
+          />
+          <LightningEngine x={350} y={10} animationPause={this.state.animationPause} />
+          <MainBoard
+            x={10}
+            y={25}
+            width={280}
+            height={80}
+            text="Custom text"
+            fontSize={32}
+            isDark={this.state.isDark}
+          />
           <Board x={125} y={250} width={405} height={500}
             isDark={this.state.isDark}
           >
-            <Page1 x={125} y={250} displayed={content[0]}/>
-            <Page2 x={125} y={250} displayed={content[1]}/>
-
             <rect
               className={css(this.state.isDark ? s.grassDark : s.grass, styles.switch)}
               x={280} y={710} width={100} height="32"
@@ -159,21 +170,9 @@ class App extends Component {
             >
               info
             </text>
+            <Page1 x={125} y={250} displayed={content[0]}/>
+            <Page2 x={125} y={250} displayed={content[1]}/>
           </Board>
-          <MainBoard
-            x={10}
-            y={25}
-            width={280}
-            height={80}
-            text="Custom text"
-            fontSize={32}
-            isDark={this.state.isDark}
-          />
-          <V3Engine x={100} y={135}
-            isDark={this.state.isDark}
-            animationPause={this.state.animationPause}
-          />
-          <LightningEngine x={350} y={10} animationPause={this.state.animationPause} />
           <Boiler x={180} y={365} animationPause={this.state.animationPause} />
           <SteamEngine x={30} y={715} />
           <AdditionalTubes isDark={this.state.isDark} x={115} y={535} />

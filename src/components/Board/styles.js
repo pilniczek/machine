@@ -1,15 +1,30 @@
 import { StyleSheet } from 'aphrodite/no-important'
-
+import { time } from '../config/variables'
 
 const styles = StyleSheet.create({
-  page: {
-    transition: 'opacity 3s',
+  originTopLeft: {
+    transformOrigin: 'top left',
   },
-  hide: {
-    opacity: '0',
+  originTopRight: {
+    transformOrigin: 'top right',
+  },
+  originbottomLeft: {
+    transformOrigin: 'bottom left',
+  },
+  originBottomRight: {
+    transformOrigin: 'bottom right',
+  },
+  hideLeft: {
+    transition: `transform ${time}ms`,
+    transform: 'rotate(90deg)',
+  },
+  hideRight: {
+    transition: `transform ${time}ms`,
+    transform: 'rotate(-90deg)',
   },
   show: {
-    opacity: '1',
+    transition: `transform ${time}ms`,
+    transform: 'rotate(0deg)',
   },
 })
 
