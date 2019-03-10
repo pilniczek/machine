@@ -4,8 +4,8 @@ import s from '../config/SVGdefsClasses'
 import Screw from '../Screw'
 import styles from './styles'
 
-const Page1 = ({x, y, isDark, style}) => (
-  <g style={style} className={css(styles.page)}>
+const Page1 = ({x, y, isDark, displayed}) => (
+  <g className={css(styles.page, displayed ? styles.hide : styles.show)}>
     <rect
       className={css(isDark ? s.whiteDark : s.white)}
       x={x+40} y={y+30} width={390-70} height="120"

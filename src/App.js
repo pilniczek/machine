@@ -95,12 +95,12 @@ class App extends Component {
 
     let content = []
     if (this.state.page === 1) {
-      content[0] = 1
-      content[1] = 0
+      content[0] = true
+      content[1] = false
     }
     if (this.state.page === 2) {
-      content[0] = 0
-      content[1] = 1
+      content[0] = false
+      content[1] = true
     }
 
     return (
@@ -137,8 +137,8 @@ class App extends Component {
           <Board x={125} y={250} width={405} height={500}
             isDark={this.state.isDark}
           >
-            <Page1 x={125} y={250} style={{ opacity: content[0] }}/>
-            <Page2 x={125} y={250} style={{ opacity: content[1] }}/>
+            <Page1 x={125} y={250} displayed={content[0]}/>
+            <Page2 x={125} y={250} displayed={content[1]}/>
 
             <rect
               className={css(this.state.isDark ? s.grassDark : s.grass, styles.switch)}
@@ -147,18 +147,14 @@ class App extends Component {
             />
             <text x={330} y={728}
               className={css(styles.switch)}
-              style={{
-                opacity: content[0],
-              }}
+              style={{opacity: content[0] ? 0 : 1}}
               onClick={() => this.handlePageChange()}
             >
               haha
             </text>
             <text x={330} y={728}
               className={css(styles.switch)}
-              style={{
-                opacity: content[1],
-              }}
+              style={{opacity: content[1] ? 0 : 1}}
               onClick={() => this.handlePageChange()}
             >
               info
